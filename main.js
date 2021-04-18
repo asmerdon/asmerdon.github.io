@@ -30,7 +30,7 @@ class bestObject { //class for best workout
 
 async function getUserName(){ //check to see if username exists
     var lastFMUserCheck = document.getElementById("lastfm_username").value
-    const userNameLink = `http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${lastFMUserCheck}&api_key=a3394ed77f14de87fddf4288c5480c26&format=json`
+    const userNameLink = `https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${lastFMUserCheck}&api_key=a3394ed77f14de87fddf4288c5480c26&format=json`
     const response = await fetch(userNameLink);
     const data = await response.json();
     if(data.hasOwnProperty("user")){ //continues if username is found
@@ -121,7 +121,7 @@ function getEndDate(startDateUnix, elapsed_time) { //converts end time to unix
 }
 
 async function getUserTracks(startDateUnix, endDateUnix) { //funciton to get the user tracks from last.fm
-    const userTracksLink = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFMUser}&api_key=a3394ed77f14de87fddf4288c5480c26&format=json&from=${startDateUnix}&to=${endDateUnix}`
+    const userTracksLink = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFMUser}&api_key=a3394ed77f14de87fddf4288c5480c26&format=json&from=${startDateUnix}&to=${endDateUnix}`
     const response = await fetch(userTracksLink)
     const data = await response.json()
     return data;
