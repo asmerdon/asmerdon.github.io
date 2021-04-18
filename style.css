@@ -1,0 +1,54 @@
+body {
+  background-color:#231F20;
+}
+
+h1 {
+  color: #FFFFFF;
+}
+
+h2 {
+  color: #FFFFFF;
+}
+
+h3 {
+  color: #FFFFFF;
+}
+
+h6 {
+  color: #FFFFFF;
+}
+
+canvas{
+  margin: 0 auto;
+  }
+
+ input[type=text] {
+    width: 25%;
+    background-color: #231F20;
+    font-size:32px;
+    font-weight:500;
+    color:white;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #555;
+  }
+
+  select {
+    background-color: #231F20;
+    color:white;
+    font-size:32px;
+    font-weight:500;
+  }
+
+  option{
+    font-weight:500;
+  }
+
+  button{
+    font: size 32px;
+    font-weight: 500;
+    background-color:#EF323E
+  }
+
+
+  
