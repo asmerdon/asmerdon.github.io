@@ -52,7 +52,7 @@ function disableButton(){ //disables button once results generation begins
 }
 
 async function stravaUserLogin(){
-    location.replace("https://www.strava.com/oauth/authorize?client_id=61540&redirect_uri=heartbeatsapp.net&response_type=code&approval_prompt=auto&scope=activity:read_all") //connects user's strava
+    location.replace("https://www.strava.com/oauth/authorize?client_id=61540&redirect_uri=https://asmerdon.github.io/&response_type=code&approval_prompt=auto&scope=activity:read_all") //connects user's strava
 }
 
 async function reAuthorize(){ //authorizes strava api tokens.
