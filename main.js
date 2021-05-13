@@ -56,6 +56,10 @@ async function stravaUserLogin(){
 }
 
 async function reAuthorize(){ //authorizes strava api tokens.
+    const urlParams = new URLSearchParams(window.location.search)
+    const myParam = urlParams.get('myParam')
+    console.log("test")
+    console.log(myParam)
     const response = await fetch(strava_auth_link,{ //api request
         method: 'post',
         headers: {
