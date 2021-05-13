@@ -52,7 +52,7 @@ function disableButton(){ //disables button once results generation begins
 }
 
 async function stravaUserLogin(){
-    location.replace("https://www.strava.com/oauth/authorize?client_id=61540&redirect_uri=https://asmerdon.github.io/&response_type=code&approval_prompt=auto&scope=activity:read_all") //connects user's strava
+    location.replace("https://www.strava.com/oauth/authorize?client_id=61540&response_type=code&redirect_uri=https://asmerdon.github.io/&approval_prompt=auto&scope=activity:read_all") //connects user's strava
 }
 
 async function reAuthorize(){ //authorizes strava api tokens.
@@ -80,19 +80,19 @@ async function getActivities(res){
     const activities_link = `https://www.strava.com/api/v3/athlete/activities?access_token=${res.access_token}` ///json access token generated from reAuthorize
     const response = await fetch(activities_link)
     const data = await response.json()
-    makeVar(data)
+    makeObj(data)
     document.getElementById("progressbar").style = "width:20%;background-color:#EF323E !important";
 }
 
-async function makeVar(res){ //creates each workout object. async and await used to pull last.fm data
+async function makeObj(res){ //creates each workout object. async and await used to pull last.fm data
     var workoutArray = []
     var stravaOutput = res;
-    for (var key of Object.keys(stravaOutput)) {
-        var startDateUnix = convertStartDate(stravaOutput[key]['start_date'])
-        var endDateUnix = getEndDate(startDateUnix, stravaOutput[key]['elapsed_time'])
-        var songsListened = await getUserTracks(startDateUnix, endDateUnix)      
+    for (var key of Object.keys(stravaOutput)) { //iterates through each workout
+        var startDateUnix = convertStartDate(stravaOutput[key]['start_date']) //converts to unix time
+        var endDateUnix = getEndDate(startDateUnix, stravaOutput[key]['elapsed_time']) //gets workout end time
+        var songsListened = await getUserTracks(startDateUnix, endDateUnix) //fetches tracks from last.fm
         var name = String("Workout " + key);
-        let workoutObj = new userWorkout(
+        let workoutObj = new userWorkout( //creates workout object
             name,
             stravaOutput[key]['start_date'],
             stravaOutput[key]['elapsed_time'],
@@ -103,11 +103,11 @@ async function makeVar(res){ //creates each workout object. async and await used
             stravaOutput[key]['suffer_score'],
             songsListened.recenttracks.track)
 
-        workoutArray.push(workoutObj)
+        workoutArray.push(workoutObj) //adds object to array
         console.log(workoutObj);
     }
     getBest(workoutArray);
-    document.getElementById("progressbar").style = "width:50%;background-color:#EF323E !important";
+    document.getElementById("progressbar").style = "width:50%;background-color:#EF323E !important"; //loading bar
 }
 
 function convertStartDate(start_date) { //converts start time to unix
@@ -149,7 +149,7 @@ async function select(){ //gets called when user selects a workout to view
 
 }
 
-function secondsToHMS(elapsed){ //converts seconds to minutes and hours
+function secondsToHMS(elapsed){ //converts seconds to minutes and hours (Lee, W. 2016) see report for full code reference
     elapsed = Number(elapsed);
     var h = Math.floor(elapsed / 3600);
     var m = Math.floor(elapsed % 3600 / 60);
@@ -157,32 +157,32 @@ function secondsToHMS(elapsed){ //converts seconds to minutes and hours
     var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
     var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
     var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
-    return hDisplay + mDisplay + sDisplay; 
+    return hDisplay + mDisplay + sDisplay;  
 }
 
-function showTracks(tracks){
+function showTracks(tracks){ //for showing album photos in web app
     for(x=0; x<3; x++){
-        document.getElementById(String("info"+x)).style="float: left; padding:20px"
+        document.getElementById(String("info" + x)).style="float: left; padding:20px"
         if(!tracks[x]){
-            document.getElementById(String("info"+x)).style="display:none" //don't show element if not enough tracks
+            document.getElementById(String("info" + x)).style="display:none" //don't show element if not enough tracks
             break;
         }
         if(!tracks[x].hasOwnProperty(["@attr"])){ //check to get rid of currently playing tracks (lastfm api quirk)
             if(tracks[x].name == "No Love"){
-                document.getElementById(String("image"+x)).src = "https://media.pitchfork.com/photos/5929c027c0084474cd0c314f/1:1/w_320/6698e088.jpeg";
+                document.getElementById(String("image" + x)).src = "https://media.pitchfork.com/photos/5929c027c0084474cd0c314f/1:1/w_320/6698e088.jpeg";
             }
             else if(tracks[x].name == "The Fever (Aye Aye)"){
-                document.getElementById(String("image"+x)).src ="https://img.discogs.com/m0t7G4PxCd37poUw3hGhzXEI5IY=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7574583-1444343617-5364.jpeg.jpg"
+                document.getElementById(String("image"+ x)).src ="https://img.discogs.com/m0t7G4PxCd37poUw3hGhzXEI5IY=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7574583-1444343617-5364.jpeg.jpg"
             }
             else{
-                document.getElementById(String("image"+x)).src = tracks[x].image[3]["#text"]; //shows album image
+                document.getElementById(String("image" + x)).src = tracks[x].image[3]["#text"]; //shows album image
             }
             artistName = String(tracks[x].artist["#text"]);
             trackName = String(tracks[x].name);
-            document.getElementById(String("artistname"+x)).style="display: inline" 
-            document.getElementById(String("artistname"+x)).innerHTML = artistName; //shows artist name
-            document.getElementById(String("songname"+x)).style="display: inline"
-            document.getElementById(String("songname"+x)).innerHTML = trackName; //shows track name
+            document.getElementById(String("artistname" + x)).style="display: inline" 
+            document.getElementById(String("artistname" + x)).innerHTML = artistName; //shows artist name
+            document.getElementById(String("songname" + x)).style="display: inline"
+            document.getElementById(String("songname" + x)).innerHTML = trackName; //shows track name
         }
     }
 }
@@ -204,7 +204,7 @@ async function getBest(workoutArray){ //sorts array of workouts to find the best
         bestAverageSpeed,
         bestAverageHeartrate
     )
-    globalBestObject = best; //stores as globas
+    globalBestObject = best; //stores as global
     getTrackInformation(bestArray); //inital results shown called from here instead of select() function
     showTracks(best.bestSufferScore.songsListened)
     document.getElementById("progressbar").style = "width:75%;background-color:#EF323E !important" 
@@ -263,6 +263,7 @@ function countOccurences(array){
         }
         occurences.push(genreOccurence); //pushes to occurences array
     }
+    console.log(occurences)
     pieChart(genresUnique, occurences); //order of each array should always match
 }
 
@@ -286,14 +287,14 @@ function pieChart(genresUnique, occurences) {
     document.getElementById("moreInfo").style="padding:20px";
     var pieChartContent = document.getElementById('pieChartContent');
     pieChartContent.innerHTML = '&nbsp;';
-    $('#pieChartContent').append('<canvas id="pieChart" style="width:50%;height:50%;"></canvas>') //redraws canvas when user selects a different workout to view
+    $('#pieChartContent').append('<canvas id="pieChart" style="width:50%;height:50%;"></canvas>') //redraws canvas when user selects a different workout to view (Farber, M 2017) referenced in report
     ctx = $("#pieChart").get(0).getContext("2d");
     chart = new Chart(ctx, {
-    // The type of chart we want to create
+    // type of chart created
     type: 'pie',
     responsive:true,
     maintainAspectRatio: false,
-    // The data for our dataset
+    // data passed in
     data: {
         labels: genresUnique, //each unique genre is passed through as for the labels
         datasets: [{
@@ -303,7 +304,7 @@ function pieChart(genresUnique, occurences) {
         }]
     },
 
-    // Configuration options go here
+    // configuration options
     options: {
         plugins: {
           datalabels: {
