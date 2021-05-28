@@ -34,7 +34,9 @@ async function getUserName(){ //check to see if username exists
     const response = await fetch(userNameLink);
     const data = await response.json();
     if(data.hasOwnProperty("user")){ //continues if username is found
-        lastFMUser = document.getElementById("lastfm_username").value ;
+        console.log("Username found.")
+        lastFMUser = document.getElementById("lastfm_username").value;
+        console.log(lastFMUser)
         document.getElementById("inputError").style="display:none";
         document.getElementById("progressDiv").style=""; //shows loading bar
         document.getElementById("progressbar").style = "width:0%"; //sets loading bar percentage to 0
@@ -72,6 +74,8 @@ async function reAuthorize(){ //authorizes strava api tokens.
         })
     })
     const data = await response.json(); //handles response
+    console.log("Strava Authorization complete.")
+    console.log(data)
     getActivities(data);
     document.getElementById("progressbar").style = "width:15%;background-color:#EF323E !important"; //loading bar, !important overrides initial colour
 }
@@ -80,6 +84,8 @@ async function getActivities(res){
     const activities_link = `https://www.strava.com/api/v3/athlete/activities?access_token=${res.access_token}` ///json access token generated from reAuthorize
     const response = await fetch(activities_link)
     const data = await response.json()
+    console.log("Strava workouts fetched:")
+    console.log(data)
     makeObj(data)
     document.getElementById("progressbar").style = "width:20%;background-color:#EF323E !important";
 }
@@ -87,6 +93,7 @@ async function getActivities(res){
 async function makeObj(res){ //creates each workout object. async and await used to pull last.fm data
     var workoutArray = []
     var stravaOutput = res;
+    console.log("Workout Objects:")
     for (var key of Object.keys(stravaOutput)) { //iterates through each workout
         var startDateUnix = convertStartDate(stravaOutput[key]['start_date']) //converts to unix time
         var endDateUnix = getEndDate(startDateUnix, stravaOutput[key]['elapsed_time']) //gets workout end time
@@ -104,8 +111,9 @@ async function makeObj(res){ //creates each workout object. async and await used
             songsListened.recenttracks.track)
 
         workoutArray.push(workoutObj) //adds object to array
-        console.log(workoutObj);
     }
+    console.log("Workout Array:")
+    console.log(workoutArray);
     getBest(workoutArray);
     document.getElementById("progressbar").style = "width:50%;background-color:#EF323E !important"; //loading bar
 }
@@ -124,6 +132,8 @@ async function getUserTracks(startDateUnix, endDateUnix) { //funciton to get the
     const userTracksLink = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFMUser}&api_key=a3394ed77f14de87fddf4288c5480c26&format=json&from=${startDateUnix}&to=${endDateUnix}`
     const response = await fetch(userTracksLink)
     const data = await response.json()
+    console.log("Returned Last.fm Tracks:")
+    console.log(data)
     return data;
 }
 
@@ -196,6 +206,9 @@ async function getBest(workoutArray){ //sorts array of workouts to find the best
     bestAverageHeartrate = workoutArray.sort(function(a, b){return b.average_heartrate - a.average_heartrate})[0];
     bestArray.push(bestMaxHeartrate, bestMaxSpeed, bestSufferScore, bestAverageSpeed, bestAverageHeartrate); //all pushed to an array for the overall breakdown
         
+    console.log("Best Workout Array:")
+    console.log(bestArray)
+
     let best = new bestObject( //best object created for use in select function (although stored globally)
         bestArray,
         bestMaxHeartrate,
