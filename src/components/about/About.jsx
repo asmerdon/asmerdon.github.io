@@ -1,14 +1,17 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me-about.jpg'
+import ME from '../../assets/linkedin.jfif'
 import {FaAward} from 'react-icons/fa'
 import {BsBriefcaseFill} from 'react-icons/bs'
+import CV from '../../assets/cv.pdf'
+import {BsChevronDoubleDown} from 'react-icons/bs'
 
 const About = () => {
   return (
     <section id = 'about'>
-      <h2>About Me</h2>
-      
+      <div className='about__title'>
+        <h1>About Me</h1>
+      </div>
       <div className='container about__container'>
         <div className="about__me">
             <div className="about__me-image">
@@ -44,7 +47,11 @@ const About = () => {
                 Duis aute irure dolor in reprehenderit in
                  voluptate velit esse cillum dolore eu
                   fugiat nulla pariatur.</p>
-          <a href='#contact' className='btn btn-primary'>Contact Me</a>
+          <div className='cta'>
+          <a href={CV} download className='btn btn-primary'>Download CV</a>
+          <a href="#contact" className='btn btn-primary'>Contact Me</a>
+          </div>
+          <a href="#contact" className='scroll__down'><BsChevronDoubleDown size={40}/></a>
         </div>
       </div>
     </section>

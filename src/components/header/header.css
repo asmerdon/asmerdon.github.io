@@ -1,5 +1,5 @@
 header {
-    height: 100vh;
+    height: 20vh;
     padding-top: 7rem;
     overflow: hidden;
 }
@@ -10,64 +10,21 @@ header {
     position: relative;
 }
 
-/* Call to Action (Buttons) */
-
-.cta {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
-}
-
 /* Social buttons */
 
 .header__socials {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     align-items: center;
     gap: 0.8rem;
-    position: absolute;
-    left: 0;
-    bottom: 3rem;
-}
-
-.header__socials::after {
-    content: '';
-    width: 1px;
-    height: 2rem;
-    background: var(--color-primary);
-}
-
-/* Image (me) */
-
-.me {
-    background: linear-gradient(var(--color-primary), transparent);
-    width: 22rem;
-    height: 30rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
-    overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem;
-}
-
-/* Scroll down */
-
-.scroll__down {
-    position: absolute;
-    right: -2.3rem;
-    bottom: 5rem;
-    transform: rotate(90deg);
-    font-weight: 300;
-    font-size: 0.9rem;
 }
 
 /* Media Queries (Medium Devices like tablets) */
 
 @media screen and (max-width: 1024px) {
     header {
-        height: 68vh;
+        height: 20vh;
     }
 }
 
@@ -75,7 +32,7 @@ header {
 
 @media screen and (max-width: 600px) {
     header {
-        height: 100vh;
+        height: 22vh;
     }
 
     .header__socials,

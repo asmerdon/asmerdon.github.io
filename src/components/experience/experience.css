@@ -4,10 +4,15 @@
     gap: 2rem;
 }
 
+.experience__title {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
 .experience__container > div {
     background: var(--color-bg-variant);
     padding: 2.4rem 5rem;
-    border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
 }
