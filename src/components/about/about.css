@@ -69,6 +69,19 @@
 
 /* Media Queries (Medium Devices like tablets) */
 
+@media screen and (max-width: 1600px) {
+    .scroll__down {
+        right: 14rem;
+        bottom: 7rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .scroll__down {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .about__container {
         grid-template-columns: 1fr;
@@ -80,6 +93,10 @@
     }
     .about__content p {
         margin: 1rem 0 1.5rem;
+    }
+
+    .scroll__down {
+        display: none;
     }
 }
 

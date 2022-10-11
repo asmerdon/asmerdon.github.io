@@ -121,6 +121,20 @@ img {
 
 /* Media Queries (Medium Devices like tablets) */
 
+@media screen and (max-width: 1920px) {
+    
+    section {
+        margin-top: 6rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 15rem;
+        margin-bottom: 4rem;
+    }
+    
+}
+
 @media screen and (max-width: 1024px) {
     .container {
         width: var(--container-width-md);
@@ -129,6 +143,14 @@ img {
     section {
         margin-top: 6rem;
     }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 5rem;
+        margin-bottom: 4rem;
+        
+    }
+    
 }
 
 /* Media Queries (Small Devices like phones) */
@@ -141,4 +163,11 @@ img {
     section > h2{
         margin-bottom: 2rem;
     }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+    }
+    
 }

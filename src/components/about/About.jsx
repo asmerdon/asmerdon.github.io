@@ -40,13 +40,7 @@ const About = () => {
               <small>BSc in Computer Science from Cardiff University</small>
             </article>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco
-               laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in
-                 voluptate velit esse cillum dolore eu
-                  fugiat nulla pariatur.</p>
+          <p>Hello, I am Alex! I am a Software Developer based in London currently working as a Java Developer at Virtusa.</p>
           <div className='cta'>
           <a href={CV} download className='btn btn-primary'>Download CV</a>
           <a href="#contact" className='btn btn-primary'>Contact Me</a>

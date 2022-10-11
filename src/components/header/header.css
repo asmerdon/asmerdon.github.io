@@ -22,6 +22,12 @@ header {
 
 /* Media Queries (Medium Devices like tablets) */
 
+@media screen and (max-width: 1920px) {
+    header {
+        height: 30vh;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     header {
         height: 20vh;
