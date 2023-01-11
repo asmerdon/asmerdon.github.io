@@ -153,7 +153,7 @@ img {
     
 }
 
-/* Media Queries (Small Devices like phones) */
+/* Media Queries (Phones) */
 
 @media screen and (max-width: 600px) {
     .container {
