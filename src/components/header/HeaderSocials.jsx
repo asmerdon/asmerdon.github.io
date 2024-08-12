@@ -8,7 +8,6 @@ const HeaderSocials = () => {
     <div className='header__socials'>
         <a href="https://www.linkedin.com/in/alex-smerdon/" target="_blank"><BsLinkedin size={32}/></a>
         <a href="https://github.com/asmerdon/" target="_blank"><FaGithub size={32}/></a>
-        <a href="https://www.kaggle.com/alexandersmerdon" target="_blank"><FaKaggle size={32}/></a>
     </div>
   )
 }

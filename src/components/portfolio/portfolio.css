@@ -1,6 +1,6 @@
 .portfolio__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
 }
 
@@ -30,6 +30,13 @@
     gap: 1rem;
     margin-bottom: 1rem;
 }
+
+.portfolio__item-image img {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Scales the image to cover the entire area, cropping if necessary */
+  }
+  
 
 /* Media Queries (Medium Devices like tablets) */
 

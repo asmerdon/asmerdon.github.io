@@ -20,7 +20,6 @@ const Footer = () => {
       <div className="footer__socials">
       <a href="https://www.linkedin.com/in/alex-smerdon/" target="_blank"><BsLinkedin size={32}/></a>
         <a href="https://github.com/asmerdon/" target="_blank"><FaGithub size={32}/></a>
-        <a href="https://www.kaggle.com/alexandersmerdon" target="_blank"><FaKaggle size={32}/></a>
       </div>
       <div className="footer__copyright">
         <small>&copy; Alexander Smerdon, 2022. All rights reserved.</small>
