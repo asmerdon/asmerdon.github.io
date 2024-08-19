@@ -6,6 +6,9 @@ import IMG3 from '../../assets/california.PNG'
 import IMG4 from '../../assets/uk.PNG'
 import IMG5 from '../../assets/svmimage.png'
 import IMG6 from '../../assets/twitter.PNG'
+import IMG7 from '../../assets/tfidf.png'
+import IMG8 from '../../assets/snowflake.png'
+import IMG9 from '../../assets/news.jpg'
 
 const Portfolio = () => {
   return (
@@ -58,6 +61,27 @@ const Portfolio = () => {
           <h3>Twitter / X Web Scraper</h3>
           <div className="portfolio__item-cta">
             <a href='https://github.com/asmerdon/Twitter-Scraper' className='btn btn-primary' target='_blank'>GitHub</a>
+          </div>
+        </article>
+        <article className='portfolio__item'>
+          <div className="portfolio__item-image"><img src={IMG8} alt=""></img></div>
+          <h3>Snowflake Pipeline</h3>
+          <div className="portfolio__item-cta">
+            <a href='https://github.com/asmerdon/Snowflake-CSV-Pipeline' className='btn btn-primary' target='_blank'>GitHub</a>
+          </div>
+        </article>
+        <article className='portfolio__item'>
+          <div className="portfolio__item-image"><img src={IMG9} alt=""></img></div>
+          <h3>Fake News Article Detection Model</h3>
+          <div className="portfolio__item-cta">
+            <a href='https://github.com/asmerdon/ML-Fake-News-Detection-' className='btn btn-primary' target='_blank'>GitHub</a>
+          </div>
+        </article>
+        <article className='portfolio__item'>
+          <div className="portfolio__item-image"><img src={IMG7} alt=""></img></div>
+          <h3>TF-IDF Implementation</h3>
+          <div className="portfolio__item-cta">
+            <a href='https://github.com/asmerdon/TF-IDF-Kmeans-clustering-Scikit-Learn-Implementation' className='btn btn-primary' target='_blank'>GitHub</a>
           </div>
         </article>
       </div>
