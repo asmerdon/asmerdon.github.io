@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d1b66d9b.css",
-    "main.js": "/static/js/main.5ce3ef31.js",
+    "main.js": "/static/js/main.4963a2f5.js",
     "static/media/statscw.pdf": "/static/media/statscw.b9ee104cb56c0309dba4.pdf",
     "static/media/datavis.pdf": "/static/media/datavis.530f15b59e9803623c96.pdf",
     "static/media/stock.jpg": "/static/media/stock.76f04452ea36629c8b6d.jpg",
@@ -12,18 +12,18 @@
     "static/media/me2.png": "/static/media/me2.0ae5c04f03ed4531a734.png",
     "static/media/svm.pdf": "/static/media/svm.9b41be20fc23578272c3.pdf",
     "static/media/disspic.PNG": "/static/media/disspic.6c7b2ab9144d7674e9db.PNG",
+    "static/media/cv.pdf": "/static/media/cv.c4eb2e7d01c0efb5c7bb.pdf",
     "static/media/uk.PNG": "/static/media/uk.843402abca2fe0b681ca.PNG",
-    "static/media/cv.pdf": "/static/media/cv.1aba894229130c0f1dfd.pdf",
     "static/media/twitter.PNG": "/static/media/twitter.5fc165535e5caaf75e56.PNG",
     "static/media/news.jpg": "/static/media/news.29f0696f9b1520ed4adc.jpg",
     "static/media/snowflake.png": "/static/media/snowflake.7f9abe801d1294a011fa.png",
     "static/media/heartbeats.png": "/static/media/heartbeats.f25bdbc8a5d826cd1d31.png",
     "index.html": "/index.html",
     "main.d1b66d9b.css.map": "/static/css/main.d1b66d9b.css.map",
-    "main.5ce3ef31.js.map": "/static/js/main.5ce3ef31.js.map"
+    "main.4963a2f5.js.map": "/static/js/main.4963a2f5.js.map"
   },
   "entrypoints": [
     "static/css/main.d1b66d9b.css",
-    "static/js/main.5ce3ef31.js"
+    "static/js/main.4963a2f5.js"
   ]
 }
