@@ -6,7 +6,7 @@ import IMG3 from '../../assets/california.PNG'
 import IMG4 from '../../assets/uk.PNG'
 import IMG5 from '../../assets/svmimage.png'
 import IMG6 from '../../assets/twitter.PNG'
-import IMG7 from '../../assets/tfidf.png'
+import IMG7 from '../../assets/stock.jpg'
 import IMG8 from '../../assets/snowflake.png'
 import IMG9 from '../../assets/news.jpg'
 
@@ -21,6 +21,7 @@ const Portfolio = () => {
           <h3> Urban Inequalities in North East London (MSc Dissertation)</h3>
           <div className="portfolio__item-cta">
           <a href={require('../../assets/dissertationmsc.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
+          <a href='https://github.com/asmerdon/Urban-Inequalities-in-NE-London' className='btn btn-primary' target='_blank'>GitHub</a>
           </div>
         </article>
         <article className='portfolio__item'>
@@ -79,9 +80,9 @@ const Portfolio = () => {
         </article>
         <article className='portfolio__item'>
           <div className="portfolio__item-image"><img src={IMG7} alt=""></img></div>
-          <h3>TF-IDF Implementation</h3>
+          <h3>Financial Sentiment NLP Approach Comparison</h3>
           <div className="portfolio__item-cta">
-            <a href='https://github.com/asmerdon/TF-IDF-Kmeans-clustering-Scikit-Learn-Implementation' className='btn btn-primary' target='_blank'>GitHub</a>
+            <a href='https://github.com/asmerdon/Financial-Sentiment-NLP' className='btn btn-primary' target='_blank'>GitHub</a>
           </div>
         </article>
       </div>
