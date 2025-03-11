@@ -22,7 +22,7 @@ const Footer = () => {
         <a href="https://github.com/asmerdon/" target="_blank"><FaGithub size={32}/></a>
       </div>
       <div className="footer__copyright">
-        <small>&copy; Alexander Smerdon, 2022. All rights reserved.</small>
+        <small>&copy; Alexander Smerdon, 2025. All rights reserved.</small>
       </div>
     </footer>
   )
