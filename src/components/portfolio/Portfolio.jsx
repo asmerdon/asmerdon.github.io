@@ -8,7 +8,7 @@ import IMG5 from '../../assets/svmimage.png'
 import IMG6 from '../../assets/twitter.PNG'
 import IMG7 from '../../assets/stock.jpg'
 import IMG8 from '../../assets/peopletracking.jpg'
-import IMG9 from '../../assets/news.jpg'
+import IMG9 from '../../assets/satelliteportfolio.PNG'
 
 const Portfolio = () => {
   return (
@@ -25,19 +25,19 @@ const Portfolio = () => {
           </div>
         </article>
         <article className='portfolio__item'>
+          <div className="portfolio__item-image"><img src={IMG9} alt=""></img></div>
+          <h3>Satellite Imagery Classifier Web App</h3>
+          <div className="portfolio__item-cta">
+            <a href='https://github.com/asmerdon/satellite-classifier-frontend' className='btn btn-primary' target='_blank'>GitHub</a>
+            <a href='https://asmerdon.github.io/satellite-classifier-frontend/' className='btn btn-primary' target='_blank'>Live Demo</a>
+          </div>
+        </article>
+        <article className='portfolio__item'>
           <div className="portfolio__item-image"><img src={IMG3} alt=""></img></div>
           <h3>Analysis of Californian Residential Block Housing</h3>
           <div className="portfolio__item-cta">
             <a href={require('../../assets/statscw.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
             <a href='https://github.com/asmerdon/7CCMMS61-Statistics-for-Data-Analysis-23-24/blob/main/K23031306.R' className='btn btn-primary' target='_blank'>GitHub</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG4} alt=""></img></div>
-          <h3>UK Regional House Prices Web App</h3>
-          <div className="portfolio__item-cta">
-          <a href={require('../../assets/datavis.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
-            <a href='https://k23031306.github.io/' className='btn btn-primary' target='_blank'>Live Demo</a>
           </div>
         </article>
       </div>
@@ -55,6 +55,15 @@ const Portfolio = () => {
           <h3>Facial Recognition and Human Tracking</h3>
           <div className="portfolio__item-cta">
             <a href='https://github.com/asmerdon/facial-recognition-and-human-tracking/' className='btn btn-primary' target='_blank'>GitHub</a>
+            <a href='https://www.youtube.com/watch?v=C0yPS6Sa9Xs' className='btn btn-primary' target='_blank'>Video Demo</a>
+          </div>
+        </article>
+        <article className='portfolio__item'>
+          <div className="portfolio__item-image"><img src={IMG4} alt=""></img></div>
+          <h3>UK Regional House Prices Web App</h3>
+          <div className="portfolio__item-cta">
+          <a href={require('../../assets/datavis.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
+            <a href='https://k23031306.github.io/' className='btn btn-primary' target='_blank'>Live Demo</a>
           </div>
         </article>
         <article className='portfolio__item'>
@@ -69,13 +78,6 @@ const Portfolio = () => {
           <h3>Report on Support Vector Machines</h3>
           <div className="portfolio__item-cta">
           <a href={require('../../assets/svm.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG9} alt=""></img></div>
-          <h3>Fake News Article Detection Model</h3>
-          <div className="portfolio__item-cta">
-            <a href='https://github.com/asmerdon/ML-Fake-News-Detection-' className='btn btn-primary' target='_blank'>GitHub</a>
           </div>
         </article>
         <article className='portfolio__item'>
