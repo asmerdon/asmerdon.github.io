@@ -46,7 +46,7 @@ const About = () => {
               <small>Python, Tensorflow, SQL, JavaScript, Numpy, Seaborn, BeautifulSoup, Selenium, Excel, R, MongoDB, Apache Spark, QGIS </small>
             </article>
           </div>
-          <p>Hello, I am Alex! I am a recent Data Science graduate based in London currently looking for a new role.</p>
+          <p>Hello, I am Alex! I'm a Data Scientist and Software Developer based in London / Haywards Heath.</p>
           <div className='cta'>
           <a href={require('../../assets/cv.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>View CV</a>
           <a href="#contact" className='btn btn-primary'>Contact Me</a>
