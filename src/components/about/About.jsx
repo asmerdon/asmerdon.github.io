@@ -35,7 +35,12 @@ const About = () => {
             <article className='about__card'>
               <BsBriefcaseFill className='about__icon'/>
               <h5>Work Experience</h5>
-              <small> • 2 Years Working Full Time as a Technical Consultant (Virtusa)</small>
+              <small>
+                <ul>
+                  <li> • 2 Years Working Full Time as a Technical Consultant (Virtusa)</li>
+                  <li> • Graduate Data Scientist at First Central</li>
+                </ul>
+              </small>
             </article>
 
             <article className='about__card'>

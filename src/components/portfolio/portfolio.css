@@ -9,6 +9,7 @@
     padding: 1.2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    min-height: 480px;
 }
 
 .portfolio__item:hover {

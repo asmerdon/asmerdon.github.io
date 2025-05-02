@@ -40,8 +40,6 @@ const Portfolio = () => {
             <a href='https://github.com/asmerdon/7CCMMS61-Statistics-for-Data-Analysis-23-24/blob/main/K23031306.R' className='btn btn-primary' target='_blank'>GitHub</a>
           </div>
         </article>
-      </div>
-      <div className="container portfolio__container">
         <article className='portfolio__item'>
           <div className="portfolio__item-image"><img src={IMG1} alt=""></img></div>
           <h3>Heartbeats (BSc Dissertation)</h3>
