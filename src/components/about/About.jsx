@@ -5,7 +5,6 @@ import {FaAward} from 'react-icons/fa'
 import {BsBriefcaseFill} from 'react-icons/bs'
 import {FaPen} from 'react-icons/fa'
 import CV from '../../assets/cv.pdf'
-import {BsChevronDoubleDown} from 'react-icons/bs'
 
 const About = () => {
   return (
@@ -21,7 +20,6 @@ const About = () => {
         </div>
 
         <div className="about__content">
-
           <div className="about__cards">
             <article className='about__card'>
               <FaAward className='about__icon'/>
@@ -46,12 +44,12 @@ const About = () => {
               <small>Python, Tensorflow, SQL, JavaScript, Numpy, Seaborn, BeautifulSoup, Selenium, Excel, R, MongoDB, Apache Spark, QGIS </small>
             </article>
           </div>
+          
           <p>Hello, I am Alex! I'm a Data Scientist and Software Developer based in London / Haywards Heath.</p>
           <div className='cta'>
-          <a href={require('../../assets/cv.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>View CV</a>
-          <a href="#contact" className='btn btn-primary'>Contact Me</a>
+            <a href={require('../../assets/cv.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>View CV</a>
+            <a href="#contact" className='btn btn-primary'>Contact Me</a>
           </div>
-          <a href="#contact" className='scroll__down'><BsChevronDoubleDown size={40}/></a>
         </div>
       </div>
     </section>
