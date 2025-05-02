@@ -26,8 +26,8 @@ const About = () => {
               <h5>Qualifications</h5>
               <small>
                 <ul>
-                  <li>MSc in Data Science from King's College London</li>
-                  <li>BSc in Computer Science from Cardiff University</li>
+                  <li> • MSc in Data Science from King's College London</li>
+                  <li> • BSc in Computer Science from Cardiff University</li>
                 </ul>
               </small>
             </article>
@@ -35,7 +35,7 @@ const About = () => {
             <article className='about__card'>
               <BsBriefcaseFill className='about__icon'/>
               <h5>Work Experience</h5>
-              <small>2 Years Working Full Time as a Technical Consultant (Virtusa)</small>
+              <small> • 2 Years Working Full Time as a Technical Consultant (Virtusa)</small>
             </article>
 
             <article className='about__card'>
