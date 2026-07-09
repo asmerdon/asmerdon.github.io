@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.9331344b.css",
-    "main.js": "/static/js/main.09ea7e69.js",
+    "main.css": "/static/css/main.c6bbad9f.css",
+    "main.js": "/static/js/main.82c52e18.js",
     "static/media/statscw.pdf": "/static/media/statscw.b9ee104cb56c0309dba4.pdf",
     "static/media/datavis.pdf": "/static/media/datavis.530f15b59e9803623c96.pdf",
     "static/media/stock.jpg": "/static/media/stock.76f04452ea36629c8b6d.jpg",
     "static/media/dissertationmsc.pdf": "/static/media/dissertationmsc.6bae0e5cbd315856c64c.pdf",
     "static/media/dissertationbsc.pdf": "/static/media/dissertationbsc.fd8b12299528e3a92455.pdf",
     "static/media/california.PNG": "/static/media/california.75ea0ee96de20acceab4.PNG",
-    "static/media/me.png": "/static/media/me.dfdd390e75f6bb160d11.png",
     "static/media/me2.png": "/static/media/me2.0ae5c04f03ed4531a734.png",
     "static/media/svm.pdf": "/static/media/svm.9b41be20fc23578272c3.pdf",
     "static/media/satelliteportfolio.PNG": "/static/media/satelliteportfolio.0bd81d22114bd1aa2a06.PNG",
+    "static/media/truesizeof.jpg": "/static/media/truesizeof.330bb2116715b2c5d0d5.jpg",
     "static/media/disspic.PNG": "/static/media/disspic.6c7b2ab9144d7674e9db.PNG",
     "static/media/cv.pdf": "/static/media/cv.9d400e887b18bab6abf4.pdf",
     "static/media/peopletracking.jpg": "/static/media/peopletracking.542ee99949d4b18b248a.jpg",
@@ -19,11 +19,11 @@
     "static/media/twitter.PNG": "/static/media/twitter.5fc165535e5caaf75e56.PNG",
     "static/media/heartbeats.png": "/static/media/heartbeats.f25bdbc8a5d826cd1d31.png",
     "index.html": "/index.html",
-    "main.9331344b.css.map": "/static/css/main.9331344b.css.map",
-    "main.09ea7e69.js.map": "/static/js/main.09ea7e69.js.map"
+    "main.c6bbad9f.css.map": "/static/css/main.c6bbad9f.css.map",
+    "main.82c52e18.js.map": "/static/js/main.82c52e18.js.map"
   },
   "entrypoints": [
-    "static/css/main.9331344b.css",
-    "static/js/main.09ea7e69.js"
+    "static/css/main.c6bbad9f.css",
+    "static/js/main.82c52e18.js"
   ]
 }
