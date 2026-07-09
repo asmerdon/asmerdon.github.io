@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './nav.css'
-import {AiOutlineHome} from 'react-icons/ai'
-import {AiOutlineUser} from 'react-icons/ai'
-import {HiOutlineBookOpen} from 'react-icons/hi'
-import {HiOutlineFolderOpen} from 'react-icons/hi'
-import {BiMessageRounded} from 'react-icons/bi'
-import {useState} from 'react'
+import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
+import { HiOutlineFolderOpen } from 'react-icons/hi'
+import { BiMessageRounded } from 'react-icons/bi'
+
+const links = [
+  { href: '#home', label: 'Home', icon: <AiOutlineHome /> },
+  { href: '#about', label: 'About', icon: <AiOutlineUser /> },
+  { href: '#portfolio', label: 'Portfolio', icon: <HiOutlineFolderOpen /> },
+  { href: '#contact', label: 'Contact', icon: <BiMessageRounded /> },
+]
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState('#')
+  const [activeNav, setActiveNav] = useState('#home')
+
   return (
     <nav>
-      <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><AiOutlineHome/></a>
-      <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><AiOutlineUser/></a>
-      <a href="#portfolio" onClick={() => setActiveNav('#portfolio')} className={activeNav === '#portfolio' ? 'active' : ''}><HiOutlineFolderOpen/></a>
-      <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><BiMessageRounded/></a>
+      {links.map(({ href, label, icon }) => (
+        <a
+          key={href}
+          href={href}
+          aria-label={label}
+          onClick={() => setActiveNav(href)}
+          className={activeNav === href ? 'active' : ''}
+        >
+          {icon}
+        </a>
+      ))}
     </nav>
   )
 }

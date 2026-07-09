@@ -1,90 +1,127 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/heartbeats.png'
-import IMG2 from '../../assets/disspic.PNG'
-import IMG3 from '../../assets/california.PNG'
-import IMG4 from '../../assets/uk.PNG'
-import IMG5 from '../../assets/svmimage.png'
-import IMG6 from '../../assets/twitter.PNG'
-import IMG7 from '../../assets/stock.jpg'
-import IMG8 from '../../assets/peopletracking.jpg'
-import IMG9 from '../../assets/satelliteportfolio.PNG'
+
+import IMG_HEARTBEATS from '../../assets/heartbeats.png'
+import IMG_DISS from '../../assets/disspic.PNG'
+import IMG_CALIFORNIA from '../../assets/california.PNG'
+import IMG_UK from '../../assets/uk.PNG'
+import IMG_SVM from '../../assets/svmimage.png'
+import IMG_TWITTER from '../../assets/twitter.PNG'
+import IMG_STOCK from '../../assets/stock.jpg'
+import IMG_TRACKING from '../../assets/peopletracking.jpg'
+import IMG_SATELLITE from '../../assets/satelliteportfolio.PNG'
+import IMG_TRUESIZE from '../../assets/truesizeof.jpg'
+
+import PDF_DISS_MSC from '../../assets/dissertationmsc.pdf'
+import PDF_DISS_BSC from '../../assets/dissertationbsc.pdf'
+import PDF_STATS from '../../assets/statscw.pdf'
+import PDF_DATAVIS from '../../assets/datavis.pdf'
+import PDF_SVM from '../../assets/svm.pdf'
+
+const projects = [
+  {
+    image: IMG_DISS,
+    title: 'Urban Inequalities in North East London (MSc Dissertation)',
+    links: [
+      { label: 'Report', href: PDF_DISS_MSC },
+      { label: 'GitHub', href: 'https://github.com/asmerdon/Urban-Inequalities-in-NE-London' },
+    ],
+  },
+  {
+    image: IMG_SATELLITE,
+    title: 'Satellite Imagery Classifier Web App',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/asmerdon/satellite-classifier-frontend' },
+      { label: 'Live Demo', href: 'https://asmerdon.github.io/satellite-classifier-frontend/' },
+    ],
+  },
+  {
+    image: IMG_CALIFORNIA,
+    title: 'Analysis of Californian Residential Block Housing',
+    links: [
+      { label: 'Report', href: PDF_STATS },
+      { label: 'GitHub', href: 'https://github.com/asmerdon/7CCMMS61-Statistics-for-Data-Analysis-23-24/blob/main/K23031306.R' },
+    ],
+  },
+  {
+    image: IMG_HEARTBEATS,
+    title: 'Heartbeats (BSc Dissertation)',
+    links: [
+      { label: 'Report', href: PDF_DISS_BSC },
+      { label: 'GitHub', href: 'https://github.com/asmerdon/Heartbeats' },
+    ],
+  },
+  {
+    image: IMG_TRACKING,
+    title: 'Facial Recognition and Human Tracking',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/asmerdon/facial-recognition-and-human-tracking/' },
+      { label: 'Video Demo', href: 'https://www.youtube.com/watch?v=C0yPS6Sa9Xs' },
+    ],
+  },
+  {
+    image: IMG_UK,
+    title: 'UK Regional House Prices Web App',
+    links: [
+      { label: 'Report', href: PDF_DATAVIS },
+      { label: 'Live Demo', href: 'https://k23031306.github.io/' },
+    ],
+  },
+  {
+    image: IMG_TWITTER,
+    title: 'Twitter / X Web Scraper',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/asmerdon/Twitter-Scraper' },
+    ],
+  },
+  {
+    image: IMG_SVM,
+    title: 'Report on Support Vector Machines',
+    links: [
+      { label: 'Report', href: PDF_SVM },
+    ],
+  },
+  {
+    image: IMG_STOCK,
+    title: 'Financial Sentiment NLP Approach Comparison',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/asmerdon/Financial-Sentiment-NLP' },
+    ],
+  },
+  {
+    image: IMG_TRUESIZE,
+    title: 'True Size Of (Any Location)',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/asmerdon/true-size-of' },
+      { label: 'Live Demo', href: 'https://asmerdon.github.io/true-size-of/' },
+    ],
+  },
+]
 
 const Portfolio = () => {
   return (
-    <section id='portfolio'>
-      <h1>Portfolio (for more, please visit my GitHub)</h1>
+    <section id="portfolio">
+      <h1 className="section__title">Portfolio</h1>
+      <p className="section__subtitle">
+        For more, please visit my <a href="https://github.com/asmerdon/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
 
       <div className="container portfolio__container">
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG2} alt=""></img></div>
-          <h3> Urban Inequalities in North East London (MSc Dissertation)</h3>
-          <div className="portfolio__item-cta">
-          <a href={require('../../assets/dissertationmsc.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
-          <a href='https://github.com/asmerdon/Urban-Inequalities-in-NE-London' className='btn btn-primary' target='_blank'>GitHub</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG9} alt=""></img></div>
-          <h3>Satellite Imagery Classifier Web App</h3>
-          <div className="portfolio__item-cta">
-            <a href='https://github.com/asmerdon/satellite-classifier-frontend' className='btn btn-primary' target='_blank'>GitHub</a>
-            <a href='https://asmerdon.github.io/satellite-classifier-frontend/' className='btn btn-primary' target='_blank'>Live Demo</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG3} alt=""></img></div>
-          <h3>Analysis of Californian Residential Block Housing</h3>
-          <div className="portfolio__item-cta">
-            <a href={require('../../assets/statscw.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
-            <a href='https://github.com/asmerdon/7CCMMS61-Statistics-for-Data-Analysis-23-24/blob/main/K23031306.R' className='btn btn-primary' target='_blank'>GitHub</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG1} alt=""></img></div>
-          <h3>Heartbeats (BSc Dissertation)</h3>
-          <div className="portfolio__item-cta">
-            <a href={require('../../assets/dissertationbsc.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
-            <a href='https://github.com/asmerdon/Heartbeats' className='btn btn-primary' target='_blank'>GitHub</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG8} alt=""></img></div>
-          <h3>Facial Recognition and Human Tracking</h3>
-          <div className="portfolio__item-cta">
-            <a href='https://github.com/asmerdon/facial-recognition-and-human-tracking/' className='btn btn-primary' target='_blank'>GitHub</a>
-            <a href='https://www.youtube.com/watch?v=C0yPS6Sa9Xs' className='btn btn-primary' target='_blank'>Video Demo</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG4} alt=""></img></div>
-          <h3>UK Regional House Prices Web App</h3>
-          <div className="portfolio__item-cta">
-          <a href={require('../../assets/datavis.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
-            <a href='https://k23031306.github.io/' className='btn btn-primary' target='_blank'>Live Demo</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG6} alt=""></img></div>
-          <h3>Twitter / X Web Scraper</h3>
-          <div className="portfolio__item-cta">
-            <a href='https://github.com/asmerdon/Twitter-Scraper' className='btn btn-primary' target='_blank'>GitHub</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG5} alt=""></img></div>
-          <h3>Report on Support Vector Machines</h3>
-          <div className="portfolio__item-cta">
-          <a href={require('../../assets/svm.pdf')} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>Report</a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image"><img src={IMG7} alt=""></img></div>
-          <h3>Financial Sentiment NLP Approach Comparison</h3>
-          <div className="portfolio__item-cta">
-            <a href='https://github.com/asmerdon/Financial-Sentiment-NLP' className='btn btn-primary' target='_blank'>GitHub</a>
-          </div>
-        </article>
+        {projects.map(({ image, title, links }) => (
+          <article key={title} className="portfolio__item">
+            <div className="portfolio__item-image">
+              <img src={image} alt={title} />
+            </div>
+            <h3>{title}</h3>
+            <div className="portfolio__item-cta">
+              {links.map(({ label, href }) => (
+                <a key={label} href={href} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                  {label}
+                </a>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   )

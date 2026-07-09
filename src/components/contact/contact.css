@@ -1,30 +1,52 @@
-/*Form*/
+#contact .section__title {
+    margin-bottom: 3rem;
+}
 
-form {
+.contact__container {
+    max-width: 640px;
+}
+
+.contact__container form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    margin-left: 20rem;
-    margin-right: 20rem;
+    gap: 1rem;
 }
 
-input, textarea {
+.contact__container input,
+.contact__container textarea {
     width: 100%;
-    padding: 1.5rem;
-    background: transparent;
-    border: 2px solid var(--color-primary-variant);
+    padding: 0.9rem 1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
     resize: none;
-    color: var(--color-black);
+    transition: var(--transition);
 }
 
-/* Media Queries (Medium Devices like tablets) */
-
-@media screen and (max-width: 1024px) {
-    
+.contact__container input:focus,
+.contact__container textarea:focus {
+    outline: none;
+    border-color: var(--color-text);
 }
 
-/* Media Queries (Small Devices like phones) */
+.contact__container input::placeholder,
+.contact__container textarea::placeholder {
+    color: var(--color-text-muted);
+}
 
-@media screen and (max-width: 600px) {
-   
+.contact__container button[disabled] {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.contact__status {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.contact__status--error {
+    color: #b3261e;
 }

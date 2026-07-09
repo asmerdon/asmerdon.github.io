@@ -1,13 +1,19 @@
 header {
-    height: 20vh;
     padding-top: 7rem;
-    overflow: hidden;
 }
 
 .header__container {
     text-align: center;
-    height: 100%;
-    position: relative;
+}
+
+.header__container h1 {
+    font-size: 2.75rem;
+    letter-spacing: -0.02em;
+}
+
+.header__tagline {
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 1.5rem;
 }
 
 /* Social buttons */
@@ -15,34 +21,28 @@ header {
 .header__socials {
     display: flex;
     justify-content: center;
-    flex-direction: row;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
 }
 
-/* Media Queries (Medium Devices like tablets) */
-
-@media screen and (max-width: 1920px) {
-    header {
-        height: 30vh;
-    }
+.header__socials a {
+    display: flex;
+    color: var(--color-text);
 }
 
-@media screen and (max-width: 1024px) {
-    header {
-        height: 20vh;
-    }
+.header__socials a:hover {
+    color: var(--color-text-muted);
+    transform: translateY(-2px);
 }
 
-/* Media Queries (Small Devices like phones) */
+/* Media Queries */
 
 @media screen and (max-width: 600px) {
     header {
-        height: 22vh;
+        padding-top: 4.5rem;
     }
 
-    .header__socials,
-    .scroll__down {
-        display: none;
+    .header__container h1 {
+        font-size: 2rem;
     }
 }

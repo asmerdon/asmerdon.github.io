@@ -1,20 +1,17 @@
 footer {
-    background: var(--color-primary);
-    padding: 3rem 0;
+    background: var(--color-accent);
+    color: var(--color-on-accent);
     text-align: center;
-    font-size: 0.9rem;
+    padding: 3.5rem 0 6.5rem;
     margin-top: 7rem;
 }
 
 footer a {
-    color: var(--color-bg);
+    color: var(--color-on-accent);
 }
 
-.footer__logo {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
-    display: inline-block;
+footer a:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .permalinks {
@@ -22,44 +19,36 @@ footer a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin: 0 auto 3rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
 }
 
 .footer__socials {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .footer__socials a {
-    background: var(--color-black);
-    color: var(--color-white);
-    padding: 0.8rem;
     display: flex;
-    border: 1px solid transparent;
+    padding: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer__socials a:hover {
-    background: transparent;
-    color: var(--color-bg);
-    border-color: var(--color-bg);
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
 .footer__copyright {
-    margin-bottom: 4rem;
-    color: var(--color-bg);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Media Queries (Small Devices like phones) */
+/* Media Queries */
 
 @media screen and (max-width: 600px) {
     .permalinks {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .footer__socials {
-        margin-bottom: 2.6rem;
+        gap: 1.25rem;
     }
 }
